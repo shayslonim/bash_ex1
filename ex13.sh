@@ -41,7 +41,7 @@ do
 	        then
 	        #print the contents of the file
 		    cat ${j}
-		    fi
+		fi
 	    done
 	    #go back to the previous directory
 	    cd ..
