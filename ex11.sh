@@ -20,7 +20,7 @@ do
             #print the line index then the line itself
             echo ${LINE_INDEX} ${line}
             #Also break the loop, so the same line won't be printed more than once
-	        break
+            break
         fi
    done
 
