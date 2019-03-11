@@ -1,4 +1,7 @@
 #!/bin/bash
+# ex11:
+# Input: A file path, a word.
+# Output: All the the lines that contain that word, each line after its index.
 
 #Save the first argument - the file path - in the variable INPUT_PATH
 INPUT_PATH=$1

@@ -1,8 +1,8 @@
 #!/bin/bash
 # ex13:
 # Input: A directory path, a file name
-# Output: The contents of all the files with that same name as the input,
-#   that are also no more than 2 levels deep in the directory tree relatively to the path.
+# Output: The contents of all the files with that have the same name as the input,
+#         that are also no more than 2 levels deep in the directory tree relatively to the path.
 
 #Save the first argument - the folder path - in the variable FOLDER_PATH
 FOLDER_PATH=$1
@@ -10,11 +10,11 @@ FOLDER_PATH=$1
 #Save the second argument - the file name - in the variable INPUT_FILE_NAME
 INPUT_FILE_NAME=$2
 
-#go to the folder-path director
+#go to the folder-path directory
 cd ${FOLDER_PATH}
 
 #for every thing in the directory
-for i in $(ls)
+for i in $(ls -v)
 do
     #if i is a file
     if [[ -f ${i} ]]
@@ -33,7 +33,7 @@ do
         #go to that directory
         cd ${i}
         #for every thing in the directory
-        for j in $(ls)
+        for j in $(ls -v)
 	    do
 	        #if it's a file and the files have the same name
 	        if [[ -f ${j} ]] &&  test ${j} = ${INPUT_FILE_NAME}

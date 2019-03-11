@@ -1,4 +1,7 @@
 #!/bin/bash
+# ex14:
+# Input: A person's full name, a path to a "Bank-log" file.
+# Output: All the lines that contain that person, and in the end the person's total balance.
 
 #Save the first argument - the full name - in the variable FULL_NAME
 FULL_NAME=$1
