@@ -8,13 +8,13 @@ BANK_FILE=$2
 #Initialize a sum variable to 0
 SUM=0
 
-#Print all the records that contain the name of that person
-grep "$FULL_NAME " ${BANK_FILE}
+#Print all the records that contain the name of that person (-w looks only for whole words)
+grep -w "$FULL_NAME"  ${BANK_FILE}
 
 #Get all the records that contain the wanted name,
 #and in a variable called VALUES, save the list of all the money transactions -
 # - which are the 3rd word of each line.
-VALUES=$(grep "$FULL_NAME " ${BANK_FILE} | awk '{print $3}')
+VALUES=$(grep -w "$FULL_NAME" ${BANK_FILE} | awk '{print $3}')
 
 #For each transaction value in the list of values:
 for value in ${VALUES}
