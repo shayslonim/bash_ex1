@@ -11,7 +11,6 @@ FOLDER_PATH=$1
 INPUT_FILE_NAME=$2
 
 #go to the folder-path director
-echo trying to go to ${FOLDER_PATH}
 cd ${FOLDER_PATH}
 
 #for every thing in the directory
